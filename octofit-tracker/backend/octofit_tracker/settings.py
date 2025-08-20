@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,17 @@ SECRET_KEY = 'django-insecure-i!*4xr(-w=_%og^mb5_)x0k675_yffie_6%y@nh&13xjtrrt+n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME', '')
+
+if CODESPACE_NAME:
+    ALLOWED_HOSTS = [
+        f'{CODESPACE_NAME}-8000.app.github.dev',
+        'localhost',
+        '127.0.0.1',
+        '*',
+    ]
+else:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
 
 
 # Application definition
@@ -137,3 +148,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['*']
+
+AUTH_USER_MODEL = 'octofit_tracker.User'
