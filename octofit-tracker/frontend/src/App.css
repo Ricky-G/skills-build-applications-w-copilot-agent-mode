@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #343a40; /* Dark gray text */
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #007bff; /* Blue navigation bar */
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important; /* White text for links */
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+h1 {
+  color: #007bff; /* Blue headings */
+}
+
+table {
+  background-color: #ffffff; /* White table background */
+  border: 1px solid #dee2e6; /* Light gray border */
+}
+
+table th {
+  background-color: #007bff; /* Blue table header */
+  color: #ffffff; /* White text */
+}
+
+table td {
+  color: #343a40; /* Dark gray text */
+}
+
+button {
+  background-color: #007bff; /* Blue buttons */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+a {
+  color: #007bff; /* Blue links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
+}
